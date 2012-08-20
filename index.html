@@ -3,6 +3,11 @@
 <head>
   <title>CSCI-C343 Data Structures - Fall 2012</title>
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <style>
+  .iumail:after {
+    content: "@indiana.edu";
+  }
+  </style>
 </head>
 <body>
 <div class="container">
@@ -11,7 +16,7 @@
 <h3 class="offset4">CSCI-C343</h3>
 <dl class="dl-horizontal">
 <dt>Lecture</dt>
-  <dd>MW 3:00-5:15 @ Ballantine 347</dd>
+  <dd>MW 4:00-5:15 @ Ballantine 347</dd>
 <dt>Labs</dt>
   <dd>R 11:15-12:05 @ Ballantine 235</dd>
   <dd>R 4:00-4:50 @ Student Building 128</dd>
@@ -64,11 +69,55 @@
   <h2>Course Description</h2>
 </div>
 <div class="row">
-  <div class="span12">
-  <p><strong>CSCI-C 343 Data Structures (4 cr.)</strong> P: CSCI-C 212. CSCI-C 241. C: CSCI-C 241. N & M Systematic study of data structures encountered in computing problems, structure and use of storage media, methods of representing structured data, and techniques for operating on data structures. Lecture and laboratory. Credit given for only one of CSCI-C 343 or H 343. </p>
+  <div class="span6">
+  <p><strong>CSCI-C 343 Data Structures (4 cr.)</strong> P: CSCI-C 212. CSCI-C 241. C: CSCI-C 241. N &amp; M Systematic study of data structures encountered in computing problems, structure and use of storage media, methods of representing structured data, and techniques for operating on data structures. Lecture and laboratory. Credit given for only one of CSCI-C 343 or H 343. </p>
+  </div>
+  <div class="span6">
+  <p>At the end of this course you will have acquired a firm knowledge of data structures and practical experience using their implementation in the Java Collections Heirarchy. 
+     You will learn industry-leading tools and collaborative practices. Additionally, the core Computer Science curriculum will be complete.<br /><big class="pull-right"><strong><em>Pretty awesome.</em></strong></big></p>
+  </div>
+</div>
 
-  <h3>Course Outcomes</h3>
-  <p>At the end of this course you will have acquired a firm knowledge of data structures and practical experience implementing them in a software development environment using industry-leading tools and collaborative practices. Additionally, you will be done with the core Computer Science curriculum.<br /><big><strong><em>Pretty awesome.</em></strong></big></p>
+<div class="page-header">
+  <h2>Topics</h2>
+</div>
+<div class="row">
+  <div class="span4">
+  <p>This course will cover data structures and their algorithms. We will discuss their implementation in the Java Collections Heirarchy and analysis of their runtime performance and memory costs.</p>
+  </div>
+  <div class="span3 offset2">
+  <h6>Data Structures</h6>
+  <ul>
+    <li>Arrays</li>
+    <li>Lists (growable arrays)</li>
+    <li>Stacks &amp; Queues</li>
+    <li>Binary Search Trees</li>
+    <li>AVL Trees</li>
+    <li>Heaps</li>
+    <li>Binomial Forests</li>
+  </ul>
+  </div>
+  <div class="span3">
+  <h6>Analysis</h6>
+  <ul>
+    <li>Big-O Notation</li>
+    <li>Memory Cost</li>
+    <li>Runtime Cost</li>
+  </ul>
+  <h6>Miscellaneous</h6>
+  <ul>
+    <li>Distributed Version Control</li>
+    <li>Java Debugging</li>
+  </ul>
+  </div>
+</div>
+
+<div class="page-header">
+  <h2>Attendance</h2>
+</div>
+<div class="row">
+  <div class="span12">
+  <p>Come to class.</p>
   </div>
 </div>
 
@@ -91,8 +140,7 @@
   <p>Software development will use the <a href="http://www.git-scm.com/">Git Source Control Manager</a>, used by <a href="https://github.com/facebook">Facebook</a>, <a href="https://github.com/twitter">Twitter</a>, <a href="https://github.com/WindowsAzure">Microsoft</a>, <a href="https://github.com/linkedin">LinkedIn</a>, <a href="https://github.com/mozilla">Mozilla</a>, <em><a href="http://git.kernel.org/">the entire Linux kernel</a></em> and <strong><em><a href="https://github.com/repositories">many, many more</a></em></strong>. We will use a private instance of the <a href="https://github.com">GitHub</a> software which uses your IU credentials, known as <a href="https://github.iu.edu/">GitHub:IU</a>. See the IU Knowledge Base article <a href="http://kb.iu.edu/data/bagk.html">What is Git and GitHub:FI, and how do I use them?</a> This is not optional, as assignments will be turned in via a git commit.</p>
   
   <h4>Tools</h4>
-  <p><strong>TODO:</strong> Settle on a cannonical IDE, write config guide.</p>
-  <p> It is recommended that students use the Eclipse/IntelliJ IDE with an appropriate Git plugin to help manage version control. It is recommended that development occur on the Computer Science Program's Burrow/Mine Linux Lab, located in Lindley Hall 004/035. Other IDEs and text editors may be used, but it is <em>highly recommended</em> students use the supported tools and systems above, especially for their debugging tools. It is the student's own perogative to install the development environment on their personal machine, using configuration instructions available on the course website.</p>
+  <p> It is recommended that students use an IDE with an appropriate Git plugin to help manage version control. It is recommended that development occur in the Mine, located in Lindley Hall 035. It is the student's own perogative to install the development environment on their personal machine. Recommendations will be given in the first week of class, along with configuration instructions.</p>
   
   <h4>Deadlines</h4>
   <p>Assignments will be turned in via a commit to <a href="http://github.iu.edu/">GitHub:IU</a> by 11:59pm on Wednesday evenings. This process will be explained during the first lab section. Important information for the next assignment will be given during lab sections on Thursday and Friday, to encourage an early start. New assignments will be released on Mondays.</p>
@@ -105,11 +153,23 @@
 </div>
 <div class="row">
   <div class="span12">
-  <p>The course will have two tests &mdash; a midterm and a final &mdash;  primarily over the analysis portions of the course, along with some understanding of the <a href="http://code.google.com/p/gstreamer-java/">gstreamer API</a>.</p>
-  <p><strong>The final will be <big>Friday, December 14 from 5-7pm</big>. It is in the syllabus 4 months in advance. Do not leave Bloomington before taking your final.</strong></p>
+  <p>The course will have two tests &mdash; a midterm and a final &mdash;  primarily over the analysis portions of the course and the Java Collections Heirarchy, along with some understanding of the <a href="http://code.google.com/p/gstreamer-java/">gstreamer API</a> from the project.</p>
+  <p><strong>The final will be <big>Friday, December 14 from 5-7pm</big>. It is in the syllabus 4 months in advance. Do not leave Bloomington before your final.</strong></p>
   </div>
 </div>
+
 <!-- ASSIGNMENTS -->
+<div class="page-header">
+  <h2>Plaigarism and Cheating</h2>
+</div>
+<div class="row">
+  <div class="span12">
+  <p><big><strong>Don't.</strong></big></p>
+  <p>Plaigarism and cheating are serious offenses. You are encouraged to work together on the project, and even to discuss homework problems, but please give credit where credit is due. If you discussed a problem with someone, consulted online resources, or got advice from an instructor please mark it in your assignment or code. We are using distributed version control, which should encourage collaboration, and commits will be tracked to individual students. The official university policy can be found in the <a href="http://www.iu.edu/~code/code/index.shtml">Code of Student Rights, Responsibilities, and Conduct</a>. Please note the section where the course instructors must report all cases of plagiarism to the Dean of Students.</p>
+  <p>The best way to avoid plagiarism is to cite your sources. If citation doesn't seem right, you're probably cheating.</p>
+  <p><big><strong>Don't.</strong></big></p>
+  </div>
+</div>
 
 </div> <!-- CONTAINER -->
 </body>
