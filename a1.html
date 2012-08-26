@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>Lab 1 Outline</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container" style="margin-bottom: 200px;">
+<div class="hero-unit">
+  <h1>A1: Intro to GitHub</h1>
+  <p><strong>Deadline:</strong> Friday, August 31, 2012 at 11:59PM (<a href="#submission">submission instructions</a>)</p>
+</div>
+  
+<div class="page-header">
+  <h2>Description</h2>
+</div>
+<div class="row">
+<div class="span12">
+  <img class="pull-right" src="img/git.png" />
+  <p>For assignment 1, you will form a group and configure your GitHub repositories. You will also practice the submission policies. This assignment is expected to take approximately 1 hour.</p>
+  <h3>GitHub:IU</h3>
+  <p>This class will use <a href="http://github.iu.edu">GitHub:IU</a> to host projects. <a href="http://kb.iu.edu/data/bagk.html">What is Git and GitHub:FI, and how do I use them?</a></p>
+  <p>GitHub is used by <a href="https://github.com/facebook">Facebook</a>, <a href="https://github.com/twitter">Twitter</a>, <a href="https://github.com/WindowsAzure">Microsoft</a>, <a href="https://github.com/linkedin">LinkedIn</a>, <a href="https://github.com/mozilla">Mozilla</a>, <em><a href="http://git.kernel.org/">the entire Linux kernel</a></em> and <strong><em><a href="https://github.com/repositories">many, many more</a></em></strong>.</p>
+  <h3>Using Git</h3>
+  <p>To complete this assignment you will need to use the <a href="http://git-scm.org">Git Source Control Manager</a>. We give you enough instructions to get started below, but it is highly recommended you starting reading the <a href="http://git-scm.com/documentation">Git Documentation</a>. (Read Chapter 1 and 2, the videos are also excellent.)</p>
+  <p>The graphic on the right is really helpful for clarifying some of the basic commands.</p>
+
+</div>
+</div>
+
+<div class="page-header">
+  <h2>Instructions</h2>
+</div>
+<div class="row">
+<div class="span12">
+  <p>There are three things you must do this week: form a team, configure git, and setup a repository. 
+  
+  <h3>Form a team</h3>
+  <p>3-5 students from any lab section. Ask people during class on Monday and Wednesday, or in your lab.</p>
+
+  <h3>Configure Git</h3>
+  <p>SSH into the Burrow and do the following:
+      <ol><li><a href="https://help.github.com/articles/set-up-git">Configuring Git</a></li>
+          <li><em>reccommended</em> - <a href="https://help.github.com/articles/generating-ssh-keys">Passwordless Login</a></li></ol></p>
+
+  <p>You will need to repeat this on any computer you want to edit code on (for example your personal machine and the burrow. You will need to register different keys or copy over your .ssh folder from the Burrow. Be warned that you might overwrite your existing keys, so check if you already have a pair made.</p>
+  <h3>Setup repoitory</h3>
+  <p>Pick 1 member to <a href="https://github.iu.edu/repositories/new">create a GitHub:IU repository</a> called "c343player". Instead of the instructions under "<strong>Next steps:</strong>", the team host should do the following:
+<pre>
+mkdir c343player
+cd c343player
+git init
+touch README.md
+</pre></p>
+
+<p>Then, edit the README.md using whichever editor you want, using the following format.
+<pre>
+# C343 Player: [GROUP_NAME]
+[GROUP_MEMBER_NAMES]
+
+[GROUP_MEMBER_IU_IDS]
+
+## Summary
+[PROJECT SUMMARY]
+
+## Goals
+[PROJECT GOALS]
+</pre>
+    
+    For advanced formatting, use <a href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown</a></li></ul> in your file.</p>
+
+<p>After this, commit the file and push to GitHub:IU:
+<pre>
+git add README.md       
+git commit -m 'first commit'
+git remote add origin git@github.iu.edu:<strong>YOUR IU USERNAME</strong>/c343player.git
+git push origin master
+</pre>
+</p>
+
+<p>Other team members will need to <a href="https://github.iu.edu/login">log into GitHub:IU</a> and then the team lead will add the members to the repository through the Admin page's Collaborators tab on the c343player repo.</p>
+  
+<p>The other team members will clone this repository:
+<pre>git clone git@github.com:<strong>LEADER'S IU USERNAME</strong>/c343player.git</pre>
+Open the <strong>README.md</strong> and add a new line below the previous person's name containing your name and ID. Then add the file to the staging area, commit, and push:
+<pre>
+git add README.md       
+git commit -m 'adding name'
+git push
+</pre>
+</p>
+<p><a href="https://github.iu.edu/c343/c343player/blob/master/README.md">Example of a completed <strong>README.md</strong>.</a></p>
+</div>
+</div>
+
+<div class="page-header">
+  <a name="submission"></a><h2>Submission Instructions</h2>
+</div>
+<div class="row">
+<div class="span12">
+When your project is ready, add the course instrcutors as collaborators on your repo: <code>jammurdo</code>, <code>dnikolov</code>, and <code>sjeganat</code>.
+</div>
+</div>
+</div>
+</body>
+</html>
