@@ -1,57 +1,78 @@
 <html>
 <head>
-  <title>A1: Intro to GitHub</title>
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<title>Theory Assignment 1: Analysis of Growable Arrays</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-<div class="container" style="margin-bottom: 200px;">
-<div class="hero-unit">
-  <h1>A2: Press Play</h1>
-  <p><strong>Deadline:</strong> Wednesday, September 12, 2012 at 11:59PM (<a href="#submission">submission instructions</a>)</p>
-</div>
-  
-<div class="page-header">
-  <h2>Description</h2>
-</div>
-<div class="row">
-<div class="span12">
-  <img class="pull-right" src="img/git.png" />
-  <p>Last week, you eventually got a GitHub:IU repository to work. Hopefully, you can see why we started there before setting up the project. This week we will take a second step and install the Eclipse IDE (Integrated Development Enviornment).
-  <h3>Using Git with Eclipse</h3>
-  <p><strong>General:</strong> If you haven't already, read the first two chapters of the <a href="http://git-scm.com/documentation">Git Documentation</a>.</p>
-  <p>The graphic on the right is repeated to clarify some of the basic commands.</p>
-  <p><strong>EGit:</strong> EGit is a plugin for using Eclipse with Git. It gives you a GUI for interacting with a Git repository. It is automatically included with the Eclipse IDE for Java Developers. The <a href="http://wiki.eclipse.org/EGit/User_Guide">EGit User's Guide</a> offers a starting point for using EGit.</p>
-</div>
-</div>
+	<div class="container" style="margin-bottom: 200px;">
+		<div class="hero-unit">
+			<h1>Theory Assignment 1: Analysis of Growable Arrays</h1>
+			<div class="alert-success">
+			<p><strong>Deadline:</strong> Monday, September 10, 2012 at 11:59PM (<a href="#submission">submission instructions</a>)</p>
+			</div>
+		</div>
+			
+		<div class="page-header">
+			<h2>Problem 1</h2>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<p>
+					Analyze the performance for the best, average and worst case scenarios when you delete an element from a growable array. Consider the 2 possibilities below when doing this analysis. 
+					<pre>
+/** 
+  * Removes the element found at the specified index-th position by replacing it with a <code>null</code> value.
+  * @param index     The index in the array of the element to be removed.
+  * @return          The object that was deleted.  
+  */
+Object removeAt(int index);
 
-<div class="page-header">
-  <h2>Instructions</h2>
-</div>
-<div class="row">
-<div class="span12">
-  <p>There are three things you must do this week: install Eclipse, create a CLI file player, and create a GUI with a play button and open file dialog.</p>
+/** 
+  * Removes the element found at the specified index-th position by shifting all elements that come after it to the "left". 
+  * That is, if we are removing the 2nd element, the 3rd element becomes the 2nd, the 4th element becomes the 3rd and so on. 
+  * Finally, the size of the array is decreased, so we know that next time we add, we can overwrite what was the last element 
+  * of the array.
+  *
+  * @param index     The index in the array of the element to be removed.
+  * @return          The object that was removed. <code>null</code> if the the specified index does not exist in the array.  
+  */
+Object removeAt(int index);
+					</pre>
+				</p>
+			</div>
+		</div>
+		
+		<div class="page-header">
+			<h2>Problem 2</h2>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<p>
+					Even though the first version of removeAt is more efficient, Java implements the second version. Discuss what the drawbacks of the first version of removeAt are, why it is difficult to work with, and not suitable as being the standard implementation in a language.
+				</p>
+			</div>
+		</div>
+		
+		<div class="page-header">
+			<h2>Problem 3</h2>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<p>The <code>add(Object item)</code> method in an ArrayList needs to keep track of the underlying array and when it gets full, it replaces it with a new, bigger array in which all elements from the old array are copied. On the first day of classes, we discussed two algorithms to determine the size of the new array. In the first, the new array is 1 larger than the old array (an N element array is replaced by an (N+1) element array). In the second algorithm, the new array is twice larger than the old array (an N element array is replaced by an 2N element array). What is the time complexity of <code>add(Object item)</code> when using the first array expansion method (replacing with an N+1 element array)? Describe in detail how you arrived at your answer.</p>
+				<p><strong>Bonus: </strong>Do the same for the second version of the expansion algorithm (replacing the underlying array with an 2N-element array). Which method is better? Since this is a more difficult analysis this bonus question is not required. We will discuss the analysis in the discussion section.</p>	
+			</div>
+		</div>
 
-<p>The other team members will clone this repository:
-<pre>git clone git@github.iu.edu:<strong>LEADER'S IU USERNAME</strong>/c343player.git</pre>
-Open the <strong>README.md</strong> and after the previous person's name and IU ID, add your name and ID: <code>[NAME] (`[IU ID]`)</code>. Then add the file to the staging area, commit, and push:
-<pre>
-git add README.md       
-git commit -m 'adding name'
-git push
-</pre>
-</p>
-<p><a href="https://github.iu.edu/c343/c343player/blob/master/README.md">Example of a completed <strong>README.md</strong>.</a></p>
-</div>
-</div>
-
-<div class="page-header">
-  <a name="submission"></a><h2>Submission Instructions</h2>
-</div>
-<div class="row">
-<div class="span12">
-When your project is ready, add the course instrcutors as collaborators on your repo: <code>jammurdo</code>, <code>dnikolov</code>, and <code>sjeganat</code>.
-</div>
-</div>
-</div>
+		<div class="page-header">
+			<a name="submission"></a><h2>Submission Instructions</h2>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<p>Create a c343homework repo on IU GitHub (let's only use c343player for your programming project). Create a ta1 folder under it and add a file with your solution in it. The file should be typeset (i.e. use something like Word, LaTeX, etc.). Make sure the course instructors have been added as collaborators to your repo: <code>jammurdo</code>, <code>dnikolov</code>, and <code>sjeganat</code>.</p>
+				<p>If the problems with IU GitHub are not resolved at the time you need to submit the assignment, we'll create an OnCourse dropbox and update this assignment with addtional instructions.</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
